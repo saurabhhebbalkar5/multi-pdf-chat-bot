@@ -37,8 +37,11 @@ The chatbot allows users to ask questions about PDF documents and receive releva
    `pip install -r requirements.txt`
 
 3. Set up your environment variables by creating a `.env` file with the following contents:
-   `OPENAI_API_KEY=<YOUR_OPEN_AI_API_KEY>`
-   `HUGGINGFACEHUB_API_TOKEN=<YOUR_HUGGINGFACE_API_KEY>`
+   ```
+   OPENAI_API_KEY=<YOUR_OPEN_AI_API_KEY>
+   HUGGINGFACEHUB_API_TOKEN=<YOUR_HUGGINGFACE_API_KEY>
+   ```
+   
    Make sure to replace `<YOUR_OPEN_AI_API_KEY>` and `<YOUR_HUGGINGFACE_API_KEY>` with your actual OpenAI API and HuggingFace keys.
 
 4. Run the application:
