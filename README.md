@@ -15,6 +15,7 @@ The chatbot allows users to ask questions about PDF documents and receive releva
 ## Technologies Used
 
 - Python
+- LangChain: LLM framework
 - Streamlit: A framework for building interactive web applications
 - PyPDF2: A library for extracting text from PDF documents
 - dotenv: A module for loading environment variables from a `.env` file
