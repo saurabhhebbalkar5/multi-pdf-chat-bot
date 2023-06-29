@@ -23,7 +23,7 @@ The chatbot allows users to ask questions about PDF documents and receive releva
 
 
 ## Design Diagram
-![Design Diagram](path/to/design_diagram.png)
+![Design Diagram](design-diagram.png)
 
 
 
@@ -48,7 +48,7 @@ The chatbot allows users to ask questions about PDF documents and receive releva
 
 ## Actual Working
 
-![Actual Working](path/to/actual_working.png)
+![Actual Working](chatbot.png)
 
 ## Configuration
 
