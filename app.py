@@ -42,10 +42,10 @@ def get_vector_store(text_chunks):
     Generate Embedding for the text and store in the vector store.
     '''
     # OpenAI Embeddings
-    # embeddings = OpenAIEmbeddings()
+    embeddings = OpenAIEmbeddings()
     
     # Hugging Face Embeddings
-    embeddings = HuggingFaceInstructEmbeddings(model_name="hkunlp/instructor-xl")
+    # embeddings = HuggingFaceInstructEmbeddings(model_name="hkunlp/instructor-xl")
 
     vector_store = FAISS.from_texts(texts=text_chunks, embedding=embeddings)
     return vector_store
@@ -56,13 +56,13 @@ def get_conversation_chain(vector_store):
     Retrieve the conversation chain from the vector store and store in memory
     '''
     # Open AI LLM
-    # llm = ChatOpenAI()
+    llm = ChatOpenAI()
 
     # Huggingface LLM
     # llm = HuggingFaceHub(repo_id="google/flan-t5-xxl", model_kwargs={"temperature":0.5, "max_length":512})
 
     # HuggingFace Falcon 7b Instruct
-    llm = HuggingFaceHub(repo_id="tiiuae/falcon-7b-instruct", model_kwargs={"temperature":0.5})
+    # llm = HuggingFaceHub(repo_id="tiiuae/falcon-7b-instruct", model_kwargs={"temperature":0.5})
 
     memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
     conversation_chain = ConversationalRetrievalChain.from_llm(
@@ -102,7 +102,7 @@ def main():
         st.session_state.chat_history= None
 
 
-    st.header("Chat about your PDFs with Krista :book:")
+    st.header("Chat about your PDFs :book:")
 
     user_question = st.text_input("Ask a Question about your document:")
     if user_question:
